@@ -1,0 +1,21 @@
+Classe abstrata Pessoa
+
+Extends PessoaFisica e 
+
+PessoaJuridica
+
+interface Conta
+abrir()
+sacar()
+depositar()
+transferir()
+consultar()
+
+implements ContaCorrente
+0.5 taxa (saques e transferencias)
+
+implements ContaPoupanca
+
+implements ContaInvestimento
+investir()
+
