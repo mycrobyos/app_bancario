@@ -1,5 +1,4 @@
-package br.com.ada.bank.service;
-import br.com.ada.bank.model.conta.Conta;
+package br.com.ada.bank.model.conta;
 
 public interface Movimentacoes {
   

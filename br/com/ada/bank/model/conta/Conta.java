@@ -1,6 +1,5 @@
 package br.com.ada.bank.model.conta;
 import br.com.ada.bank.model.pessoa.Pessoa;
-import br.com.ada.bank.service.Movimentacoes;
 
 public abstract class Conta implements Movimentacoes {
 
@@ -12,6 +11,7 @@ public abstract class Conta implements Movimentacoes {
     System.out.println(saldo);
     
   }
+  
   @Override
   public void depositar(Double valor) {
     this.saldo += valor;
@@ -35,6 +35,6 @@ public abstract class Conta implements Movimentacoes {
       throw new IllegalArgumentException("Saldo Insuficiente");
     }
   }
-
+  
 
 }
