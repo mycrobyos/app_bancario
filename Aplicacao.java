@@ -2,46 +2,36 @@ public class Aplicacao {
 
   public static void main(String[] args) {
 
-    PessoaFisica joao = new PessoaFisica();
-    PessoaFisica jose = new PessoaFisica();
-    PessoaJuridica antonio = new PessoaJuridica();
+    Documento cpfDoJoao = new Cpf("123.456.789-10");
+    Documento cpfDoJose = new Cpf("321.654.987-11");
+    Documento cnpjDaOficina = new Cnpj("100.100.100/0001-10");
 
-    jose.addConta(contaDoJose);
-    jose.addConta(contaDoJose2);
+    Pessoa joao = new PessoaFisica("joao", cpfDoJoao);
+    Pessoa jose = new PessoaFisica("jose", cpfDoJose);
+    Pessoa oficina = new PessoaJuridica("oficina", cnpjDaOficina);
 
-    ContaCorrente contaCorrenteDoJoao = ContaCorrente.abrir(joao, 1000.0); //armazenar o saldo
+    Conta contaCorrenteDoJoao = new ContaCorrente(joao, 1000.0);
 
-    ContaPoupanca contaPoupancaDoJoao = ContaPoupanca.abrir(joao, 1000.0); //validar se não é PJ
+    Conta contaPoupancaDoJose = new ContaPoupanca(jose, 1000.0);
 
-    ContaInvestimento contaInvestimentoDoJoao = ContaInvestimento.abrir(joao, 1000.0);
-    //validar rendimento do PF
-    //validar rendimento do PJ
+    Conta contaInvestimentoDaOficina = new ContaInvestimento(oficina, 1000.0);
 
-    ContaCorrente contaCorrenteDoAntonio = ContaCorrente.abrir(antonio, 1000.0);
-    ContaInvestimento contaInvestimentoDoAntonio = ContaInvestimento.abrir(antonio, 1000.0);
+    contaCorrenteDoJoao.depositar(50.0);
+    contaCorrenteDoJoao.sacar(50.0);
+    contaCorrenteDoJoao.consultar();
 
-    ContaCorrente contaCorrenteDoJose = ContaCorrente.abrir(jose, 1000.0);
+    contaPoupancaDoJose.depositar(60.0);
+    contaPoupancaDoJose.sacar(100.0);
+    contaPoupancaDoJose.consultar();
 
-    contaCorrenteDoJoao.sacar(50.0); //subtrair do saldo o valor + 0.5%
-    contaCorrenteDoJoao.saldo(); // sysout
-    contaCorrenteDoJoao.depositar(50,0); //acrescentar no saldo
-    contaCorrenteDoJoao.transferir(50,0, contaCorrenteDoJose); 
-    //deve descontar o valor + 0.5%
-    //acrescentar valor ao saldo da conta destino
+    contaInvestimentoDaOficina.depositar(50.0);
+    contaInvestimentoDaOficina.sacar(5000.0);
+    contaInvestimentoDaOficina.consultar();
 
-    contaInvestimentoDoAntonio.investir(1000.00);
-
-   
-
-    contaInvestimentoDoAntonio.rendimento?
-
-
-    
-
-
-
-
-
+    contaInvestimentoDaOficina.transferir(1000.0, contaCorrenteDoJoao);
+    contaInvestimentoDaOficina.consultar();
+    contaCorrenteDoJoao.consultar();
   }
+
   
 }
