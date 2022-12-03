@@ -1,3 +1,7 @@
+package br.com.ada.bank.model.conta;
+import br.com.ada.bank.model.pessoa.Pessoa;
+import br.com.ada.bank.service.Movimentacoes;
+
 public abstract class Conta implements Movimentacoes {
 
   protected Pessoa titular;

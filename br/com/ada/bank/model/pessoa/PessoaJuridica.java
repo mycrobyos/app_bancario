@@ -1,3 +1,6 @@
+package br.com.ada.bank.model.pessoa;
+import br.com.ada.bank.model.doc.Documento;
+
 public class PessoaJuridica extends Pessoa {
 
   public PessoaJuridica(String name, Documento doc) {

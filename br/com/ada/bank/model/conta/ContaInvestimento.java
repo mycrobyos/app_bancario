@@ -1,6 +1,9 @@
-public class ContaCorrente extends Conta {
+package br.com.ada.bank.model.conta;
+import br.com.ada.bank.model.pessoa.Pessoa;
 
-  public ContaCorrente (Pessoa titular, Double saldoInicial) {
+public class ContaInvestimento extends Conta {
+
+  public ContaInvestimento(Pessoa titular, Double saldoInicial) {
     super.titular = titular;
     super.saldo = saldoInicial;
   }

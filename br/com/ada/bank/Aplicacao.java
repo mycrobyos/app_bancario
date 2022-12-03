@@ -1,3 +1,15 @@
+package br.com.ada.bank;
+import br.com.ada.bank.model.conta.Conta;
+import br.com.ada.bank.model.conta.ContaCorrente;
+import br.com.ada.bank.model.conta.ContaInvestimento;
+import br.com.ada.bank.model.conta.ContaPoupanca;
+import br.com.ada.bank.model.doc.Cnpj;
+import br.com.ada.bank.model.doc.Cpf;
+import br.com.ada.bank.model.doc.Documento;
+import br.com.ada.bank.model.pessoa.Pessoa;
+import br.com.ada.bank.model.pessoa.PessoaFisica;
+import br.com.ada.bank.model.pessoa.PessoaJuridica;
+
 public class Aplicacao {
 
   public static void main(String[] args) {
