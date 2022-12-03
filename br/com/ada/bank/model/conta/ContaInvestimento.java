@@ -12,7 +12,7 @@ public class ContaInvestimento extends Conta {
   public void sacar(Double valor) {
     if (super.saldo < (valor + valor * 0.05)) {
       throw new IllegalArgumentException("Saldo insuficiente");
-    } else if (titular.doc.type.equals("j")) {
+    } else if (titular.getDoc().getType().equals("j")) {
       super.saldo -= valor * 0.05;
     }
     super.saldo -= valor;
@@ -22,7 +22,7 @@ public class ContaInvestimento extends Conta {
   public void transferir(Double valor, Conta destinatario) {
     if (super.saldo < (valor + valor * 0.05)) {
       throw new IllegalArgumentException("Saldo insuficiente");
-    } else if (titular.doc.type.equals("j")) {
+    } else if (titular.getDoc().getType().equals("j")) {
       super.saldo -= valor * 0.05;
     }
     super.saldo -= valor;
