@@ -9,7 +9,6 @@ public abstract class Conta implements Movimentacoes {
   @Override
   public void consultar() {
     System.out.println(saldo);
-    
   }
   
   @Override
@@ -34,6 +33,22 @@ public abstract class Conta implements Movimentacoes {
     } else {
       throw new IllegalArgumentException("Saldo Insuficiente");
     }
+  }
+
+  public Pessoa getTitular() {
+    return titular;
+  }
+
+  public void setTitular(Pessoa titular) {
+    this.titular = titular;
+  }
+
+  public Double getSaldo() {
+    return saldo;
+  }
+
+  public void setSaldo(Double saldo) {
+    this.saldo = saldo;
   }
   
 

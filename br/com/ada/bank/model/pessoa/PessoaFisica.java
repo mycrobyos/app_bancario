@@ -3,15 +3,15 @@ import br.com.ada.bank.model.doc.Documento;
 
 public class PessoaFisica extends Pessoa{
 
-  public PessoaFisica(String name, Documento doc) {
+  // public PessoaFisica(String name, Documento doc) {
     
-    super.setName(name);
+  //   super.setName(name);
 
-    if(doc.getType().equals("f")){
-      super.setDoc(doc);
-    } else {
-      throw new IllegalArgumentException("Você deve usar um CPF");
-    }
-  }
+  //   if(doc.getType().equals("f")){
+  //     super.setDoc(doc);
+  //   } else {
+  //     throw new IllegalArgumentException("Você deve usar um CPF");
+  //   }
+  // }
   
 }
