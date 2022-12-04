@@ -4,10 +4,10 @@ import br.com.ada.bank.model.conta.ContaCorrente;
 import br.com.ada.bank.model.conta.ContaFactory;
 import br.com.ada.bank.model.conta.ContaInvestimento;
 import br.com.ada.bank.model.conta.ContaPoupanca;
+import br.com.ada.bank.model.doc.ClienteFactory;
 import br.com.ada.bank.model.doc.Cnpj;
 import br.com.ada.bank.model.doc.Cpf;
 import br.com.ada.bank.model.doc.Documento;
-import br.com.ada.bank.model.pessoa.CadastroFactory;
 import br.com.ada.bank.model.pessoa.Pessoa;
 
 public class Aplicacao {
@@ -20,11 +20,11 @@ public class Aplicacao {
     Documento cpfDoJose = new Cpf("321.654.987-11");
     Documento cnpjDaOficina = new Cnpj("100.100.100/0001-10");
 
-    //pessoas criadas com factory/!!!
+    //clientes criados com factory!!!
 
-    Pessoa joao = CadastroFactory.fichaDeCadastro(cpfDoJoao);
-    Pessoa jose = CadastroFactory.fichaDeCadastro(cpfDoJose);
-    Pessoa oficina = CadastroFactory.fichaDeCadastro(cnpjDaOficina);
+    Pessoa joao = ClienteFactory.cadastrarCliente(cpfDoJoao);
+    Pessoa jose = ClienteFactory.cadastrarCliente(cpfDoJose);
+    Pessoa oficina = ClienteFactory.cadastrarCliente(cnpjDaOficina);
 
     //sao pessoas fisicas pq clientes apresentaram cpf
     joao.setName("joao");

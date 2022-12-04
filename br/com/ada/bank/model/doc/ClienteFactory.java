@@ -1,10 +1,12 @@
-package br.com.ada.bank.model.pessoa;
+package br.com.ada.bank.model.doc;
 
-import br.com.ada.bank.model.doc.Documento;
+import br.com.ada.bank.model.pessoa.Pessoa;
+import br.com.ada.bank.model.pessoa.PessoaFisica;
+import br.com.ada.bank.model.pessoa.PessoaJuridica;
 
-public class CadastroFactory {
+public class ClienteFactory {
 
-  public static Pessoa fichaDeCadastro(Documento doc) {
+  public static Pessoa cadastrarCliente(Documento doc) {
 
     if(doc.getClass().getSimpleName().equals("Cnpj")){
       return new PessoaJuridica();
